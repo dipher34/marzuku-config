@@ -80,10 +80,6 @@
         </div>
         <div class="button-container" style="display: flex; justify-content: center; gap: 20px; margin-top: 30px;">
             <div class="hover-button">
-                <img src="Resources/Covers/sang.png" alt="Button 1" class="button-image">
-                <div class="hover-text">Paradiso</div>
-            </div>
-            <div class="hover-button">
                 <img src="Resources/Covers/fraud.jpg" alt="Button 2" class="button-image">
                 <div class="hover-text">Fraudulence</div>
             </div>
@@ -98,40 +94,13 @@
         </div>
         <br>
         </div>
+        <br><br><br>
 </div>
 <div class="footer" style="text-align: center; font-family: 'Inter', sans-serif; font-size: 0.8rem; color: rgb(255, 199, 17); margin-top: 20px; background-color: rgba(0, 0, 0, 1); width: 100%; padding: 5px 0; line-height: 0.4;">
-    <p>Copyright 2024-2025 • All Site Rights Reserved © vertis (dipher34) • Publish 21</p>
+    <p>Copyright 2024-2025 • All Site Rights Reserved © vertis (dipher34) • Publish 22</p>
 </div>
 <script>
   const pages = {
-    paradiso: `
-      <div style="display: flex; width: 100%; font-family: 'Inter', sans-serif; color: rgb(255, 199, 17);">
-        <!-- Text Section -->
-        <div style="flex: 0 0 300px; text-align: left; padding: 20px; margin-left: 0;">
-          <h2>Paradiso</h2>
-          <p> Paradiso is a custom campaign made by ULTRAROBIEHH. </p>
-          <div style="display: flex; justify-content: flex-start; gap: 10px; margin-top: 20px;">
-            <button onclick="fadeToContent('ultraviolence', pages.ultraviolence)" style="background: black; border: none; color: white; font-size: 1.2rem; cursor: pointer; padding: 5px 10px; border-radius: 5px;">
-              ←
-            </button>
-            <button onclick="fadeToContent('fraudulence', pages.fraudulence)" style="background: black; border: none; color: white; font-size: 1.2rem; cursor: pointer; padding: 5px 10px; border-radius: 5px;">
-              →
-            </button>
-          </div>
-          <p><a href="index.html#main">← Back to main</a></p>
-        </div>
-        <!-- Media Section -->
-        <div style="flex: 1; display: flex; flex-direction: row; align-items: flex-start; gap: 20px; padding: 20px;">
-          <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Rg4TxwDYrQ4" title="YouTube video player" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px; margin-right: 30px;"></iframe>
-            <img src="Resources/Covers/sang.png" alt="Paradiso Image" style="max-width: 350px; height: auto; margin-right: 20px;">
-            <div style="width: 80%; height: 2px; background-color: rgb(255, 255, 255); margin: 20px 0;"></div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/beVpt4fsypk" title="YouTube video player" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-bottom: 20px; margin-right: 30px;"></iframe>
-          </div>
-        </div>
-      </div>
-      
-    `,
     fraudulence: `
       <div style="display: flex; width: 100%; font-family: 'Inter', sans-serif; color: rgb(255, 199, 17);">
         <!-- Text Section -->
@@ -139,7 +108,7 @@
           <h2>Fraudulence</h2>
           <p> Fraudulence is a custom layer campaign, a take on Fraud, made by SpelunkyGaming. </p>
           <div style="display: flex; justify-content: flex-start; gap: 10px; margin-top: 20px;">
-            <button onclick="fadeToContent('paradiso', pages.paradiso)" style="background: black; border: none; color: white; font-size: 1.2rem; cursor: pointer; padding: 5px 10px; border-radius: 5px;">
+            <button onclick="fadeToContent('ultraviolence', pages.ultraviolence)" style="background: black; border: none; color: white; font-size: 1.2rem; cursor: pointer; padding: 5px 10px; border-radius: 5px;">
               ←
             </button>
             <button onclick="fadeToContent('sanguinLunum', pages.sanguinLunum)" style="background: black; border: none; color: white; font-size: 1.2rem; cursor: pointer; padding: 5px 10px; border-radius: 5px;">
@@ -198,7 +167,7 @@
             <button onclick="fadeToContent('sanguinLunum', pages.sanguinLunum)" style="background: black; border: none; color: white; font-size: 1.2rem; cursor: pointer; padding: 5px 10px; border-radius: 5px;">
               ←
             </button>
-            <button onclick="fadeToContent('paradiso', pages.paradiso)" style="background: black; border: none; color: white; font-size: 1.2rem; cursor: pointer; padding: 5px 10px; border-radius: 5px;">
+            <button onclick="fadeToContent('fraudulence', pages.fraudulence)" style="background: black; border: none; color: white; font-size: 1.2rem; cursor: pointer; padding: 5px 10px; border-radius: 5px;">
               →
             </button>
           </div>
@@ -228,7 +197,7 @@
     copyright: `
       <div style="text-align: center; font-family: 'Inter', sans-serif; color: rgb(255, 199, 17); padding: 20px;">
         <h2>COPYRIGHT INFO:</h2>
-        <p>All my tracks are copyrighted and <b>need my permission</b> to use outside of YouTube Videos and Live Streaming websites. Please <b>credit me</b> on youtube videos and live streams. </p>
+        <p>All my tracks are copyrighted and need my permission to use outside of YouTube Videos and Live Streaming websites <b>as long as you credit me.</b></p>
         <p><a href="#main" onclick="restoreMainContent()" style="color: rgb(255, 199, 17);">← Back to main</a></p>
       </div>
     `,
@@ -293,15 +262,8 @@
   });
 
   function attachButtonHandlers() {
-    const paradisoButton = document.querySelector('.hover-button:nth-child(1)');
-    if (paradisoButton) {
-      paradisoButton.addEventListener('click', (event) => {
-        const newTab = event.ctrlKey || event.metaKey || event.button === 1;
-        fadeToContent('paradiso', pages.paradiso, newTab);
-      });
-    }
 
-    const fraudulenceButton = document.querySelector('.hover-button:nth-child(2)');
+    const fraudulenceButton = document.querySelector('.hover-button:nth-child(1)');
     if (fraudulenceButton) {
       fraudulenceButton.addEventListener('click', (event) => {
         const newTab = event.ctrlKey || event.metaKey || event.button === 1;
@@ -309,7 +271,7 @@
       });
     }
 
-    const sanguinLunumButton = document.querySelector('.hover-button:nth-child(3)');
+    const sanguinLunumButton = document.querySelector('.hover-button:nth-child(2)');
     if (sanguinLunumButton) {
       sanguinLunumButton.addEventListener('click', (event) => {
         const newTab = event.ctrlKey || event.metaKey || event.button === 1;
@@ -317,7 +279,7 @@
       });
     }
 
-    const ultraviolenceButton = document.querySelector('.hover-button:nth-child(4)');
+    const ultraviolenceButton = document.querySelector('.hover-button:nth-child(3)');
     if (ultraviolenceButton) {
       ultraviolenceButton.addEventListener('click', (event) => {
         const newTab = event.ctrlKey || event.metaKey || event.button === 1;
