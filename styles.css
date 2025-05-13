@@ -1,239 +1,304 @@
-.btn-border-to-line{
-	transition-property: all;
-	transition-duration: .6s;
-	transition-timing-function: ease;
+.btn-border-to-line {
+    transition-property: all;
+    transition-duration: .6s;
+    transition-timing-function: ease;
 }
-.btn-border-to-line-text{
-	cursor: pointer;
+
+.btn-border-to-line-text {
+    cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-weight: 1000;
-	font-size:16px;
-	text-transform: uppercase;
-	width: 200px;
-	position: relative;
-	padding: 10px;
-	padding-top: 15px;
-	padding-left:60px;
-	padding-right:60px;
-	text-decoration: none;
-	transition: all .6s ease-in;
-	background: rgb(0, 0, 0);
-	outline: none;
-	border: 0;
+    font-size:16px;
+    text-transform: uppercase;
+    width: 200px;
+    position: relative;
+    padding: 10px;
+    padding-top: 15px;
+    padding-left:60px;
+    padding-right:60px;
+    text-decoration: none;
+    transition: all .6s ease-in;
+    background: rgb(0, 0, 0);
+    outline: none;
+    border: 0;
 }
+
 .btn-border-to-line-text:hover {
-	font-weight:bold;
+    font-weight:bold;
 }
+
 .btn-border-to-line-text svg {
-	height: 50px;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
+
 .btn-border-to-line-text rect {
-	fill: none;
-	stroke-width: 5;
-	stroke-dasharray: 412, 0;
-	transition: all 0.5s linear;
+    fill: none;
+    stroke-width: 5;
+    stroke-dasharray: 412, 0;
+    transition: all 0.5s linear;
 }
+
 .btn-border-to-line-text:hover rect {
-	stroke-width: 4;
-	stroke-dasharray: 23, 365;
-	stroke-dashoffset: 58;
-	transition: all 1.9s cubic-bezier(0.19, 1, 0.22, 1);
+    stroke-width: 4;
+    stroke-dasharray: 23, 365;
+    stroke-dashoffset: 58;
+    transition: all 1.9s cubic-bezier(0.19, 1, 0.22, 1);
 }
-    a {
-      color: #ffd344;
-      text-decoration: none;
-    }
 
-    a:hover {
-      text-decoration: underline;
-    }
+a {
+    color: #ffd344;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .btn-border-to-line-text--gray {
-	color: #ffffff;
+    color: #ffffff;
 }
+
 .btn-border-to-line-text--gray rect {
-	stroke: #ffffff;
+    stroke: #ffffff;
 }
+
 .btn-border-to-line-text--orange {
-	color: #FEAE00;
+    color: #FEAE00;
 }
+
 .btn-border-to-line-text--orange rect {
-	stroke: #FEAE00;
+    stroke: #FEAE00;
 }
+
 .btn-border-to-line-text--blue {
-	color: #3A86FF;
+    color: #3A86FF;
 }
+
 .btn-border-to-line-text--yellow {
-	color: #ffca3a;
+    color: #ffca3a;
 }
+
 .btn-border-to-line-text--yellow rect {
-	color: #ffca3a;
+    color: #ffca3a;
 }
+
 .btn-border-to-line-text--blue rect {
-	stroke: #3A86FF;
+    stroke: #3A86FF;
 }
+
 .image-with-border {
-  display: block;
-  margin: 20px auto;
-  border: 2px solid #ffd280; /* Yellow-orange color */
-  width: 20%; /* Adjust the width as needed */
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #ffd280; /* Yellow-orange color */
+    width: 20%; /* Adjust the width as needed */
 }
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
 
-    body {
-      background-image: url('Resources/lol.webp'); /* Replace with your image URL */
-      background-repeat: repeat;
-      background-size: 15px 23px; /* Adjust the size of the repeated background */
-      animation: scrollBg 20s linear infinite;
-    }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
-    @keyframes scrollBg {
-      0% {
+body {
+    background-image: url('Resources/lol.webp'); /* Replace with your image URL */
+    background-repeat: repeat;
+    background-size: 15px 23px; /* Adjust the size of the repeated background */
+    animation: scrollBg 20s linear infinite;
+}
+
+@keyframes scrollBg {
+    0% {
         background-position: 0 0;
-      }
-      100% {
+    }
+    100% {
         background-position: 1000px 1000px;
-      }
     }
+}
 
+.fixed-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust the height as needed */
+    background-color: #030201;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000; /* Ensures it stays above other content */
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+}
+
+.fixed-banner span {
+    flex: 1;
+    text-align: left;
+    margin-left: 20px; /* Add margin to the left */
+    font-family: 'Inter', sans-serif; /* Set font to Inter */
+    /* Adjust boldness and size */
+    font-weight: 700; /* Bold */
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Add margin to avoid overlap with the fixed banner */
+}
+
+.footer {
+    position: fixed; /* Make the footer fixed */
+    bottom: 0; /* Stick to the bottom of the viewport */
+    left: 0;
+    width: 100%; /* Full width */
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem; /* Smaller text size */
+    color: rgb(255, 199, 17);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 3px 0; /* Smaller padding */
+    line-height: 1; /* Adjust line height */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.header {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #FFA500; /* Yellow-orange color */
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Increase spacing between logos */
+    margin-top: 20px;
+}
+
+.social-buttons img {
+    width: 40px; /* Make the logos smaller */
+    height: 40px; /* Maintain proportional size */
+    object-fit: contain; /* Ensures the aspect ratio is maintained */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-buttons img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.hover-button {
+    position: relative;
+    width: 200px; /* Button size */
+    height: 200px; /* Button size */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.hover-button:hover .button-image {
+    transform: scale(1.2); /* Zoom in slightly */
+}
+
+.fade-section {
+    transition: opacity 0.5s ease;
+}
+
+.hover-text {
+    position: absolute;
+    bottom: -30%; /* Initially hidden below the image */
+    left: 0;
+    width: 100%;
+    height: 30%; /* Covers 30% of the bottom */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    line-height: 50px; /* Adjusted for smaller height */
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem; /* Smaller text size */
+    border-top: 2px solid black; /* Black border */
+    transition: bottom 0.3s ease; /* Smooth transition */
+}
+
+.hover-button:hover .hover-text {
+    bottom: 0; /* Slide up to reveal the text */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
     .fixed-banner {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100px; /* Adjust the height as needed */
-      background-color: #030201;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      padding: 0 20px;
-      z-index: 1000; /* Ensures it stays above other content */
-      color: white;
-      font-family: 'Inter', sans-serif;
-      font-size: 1.5rem;
-    }
-
-    .fixed-banner span {
-      flex: 1;
-      text-align: left;
-      margin-left: 20px; /* Add margin to the left */
-      font-family: 'Inter', sans-serif; /* Set font to Inter */
-      /* Adjust boldness and size */
-      font-weight: 700; /* Bold */
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 10px;
     }
 
     .btn-container {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .content {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10px; /* Add margin to avoid overlap with the fixed banner */
-    }
-
-    .footer {
-      position: fixed; /* Make the footer fixed */
-      bottom: 0; /* Stick to the bottom of the viewport */
-      left: 0;
-      width: 100%; /* Full width */
-      text-align: center;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem; /* Smaller text size */
-      color: rgb(255, 199, 17);
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 3px 0; /* Smaller padding */
-      line-height: 1; /* Adjust line height */
-      z-index: 1000; /* Ensure it stays above other content */
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-right: 0;
     }
 
     .header {
-      text-align: center;
-      font-family: 'Inter', sans-serif;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #FFA500; /* Yellow-orange color */
-    }
-
-    .social-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 30px; /* Increase spacing between logos */
-      margin-top: 20px;
+        font-size: 1.5rem;
     }
 
     .social-buttons img {
-      width: 40px; /* Make the logos smaller */
-      height: 40px; /* Maintain proportional size */
-      object-fit: contain; /* Ensures the aspect ratio is maintained */
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .social-buttons img:hover {
-      transform: scale(1.1); /* Slight zoom effect on hover */
+        width: 30px;
+        height: 30px;
     }
 
     .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .hover-button {
-      position: relative;
-      width: 200px; /* Button size */
-      height: 200px; /* Button size */
-      overflow: hidden;
-      cursor: pointer;
+        width: 150px;
+        height: 150px;
     }
-
-    .button-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease; /* Smooth zoom effect */
-    }
-
-    .hover-button:hover .button-image {
-      transform: scale(1.2); /* Zoom in slightly */
-    }
-    .fade-section {
-  transition: opacity 0.5s ease;
-}
-
 
     .hover-text {
-      position: absolute;
-      bottom: -30%; /* Initially hidden below the image */
-      left: 0;
-      width: 100%;
-      height: 30%; /* Covers 30% of the bottom */
-      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-      color: white;
-      text-align: center;
-      line-height: 50px; /* Adjusted for smaller height */
-      font-family: 'Inter', sans-serif;
-      font-size: 1rem; /* Smaller text size */
-      border-top: 2px solid black; /* Black border */
-      transition: bottom 0.3s ease; /* Smooth transition */
+        font-size: 0.8rem;
+        line-height: 40px;
     }
 
-    .hover-button:hover .hover-text {
-      bottom: 0; /* Slide up to reveal the text */
+    .description {
+        font-size: 1rem;
+        padding: 10px;
     }
+
+    .image-with-border {
+        width: 80%; /* Adjust image size for smaller screens */
+    }
+}
