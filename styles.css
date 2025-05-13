@@ -8,14 +8,14 @@
     cursor: pointer;
     font-family: 'Inter', sans-serif;
     font-weight: 1000;
-    font-size:16px;
+    font-size: 16px;
     text-transform: uppercase;
     width: 200px;
     position: relative;
     padding: 10px;
     padding-top: 15px;
-    padding-left:60px;
-    padding-right:60px;
+    padding-left: 60px;
+    padding-right: 60px;
     text-decoration: none;
     transition: all .6s ease-in;
     background: rgb(0, 0, 0);
@@ -24,7 +24,7 @@
 }
 
 .btn-border-to-line-text:hover {
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .btn-border-to-line-text svg {
@@ -269,8 +269,21 @@ body {
         margin-right: 0;
     }
 
+    .btn-border-to-line-text {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px;
+    }
+
     .header {
         font-size: 1.5rem;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 
     .social-buttons img {
@@ -300,5 +313,16 @@ body {
 
     .image-with-border {
         width: 80%; /* Adjust image size for smaller screens */
+    }
+
+    .footer {
+        font-size: 0.7rem;
+        padding: 10px;
+        line-height: 1.5;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
     }
 }
